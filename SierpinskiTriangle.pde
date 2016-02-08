@@ -4,7 +4,6 @@ public void setup()
   size(600, 601);
   background(200);
   stroke(255);
-  //strokeWeight(0.1);
 }
 public void draw()
 {
@@ -13,8 +12,10 @@ public void draw()
 public void mousePressed()//optional
 {
   background(200);
-  if (mouseButton == LEFT)
+  if (mouseButton == LEFT && n >= 20) //can click 5x
     n = n / 2;
+  if (n == 15) //can click 4x
+    n = 500;
 }
 public void sierpinski(int x, int y, int len) 
 {
