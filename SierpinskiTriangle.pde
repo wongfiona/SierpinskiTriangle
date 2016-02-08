@@ -1,30 +1,34 @@
+int n = 500;
 public void setup()
 {
-  size(600, 605);
+  size(600, 601);
   background(200);
   stroke(255);
+  //strokeWeight(0.1);
 }
 public void draw()
 {
   sierpinski(0, 600, 600);
 }
-public void mouseDragged()//optional
+public void mousePressed()//optional
 {
-
+  background(200);
+  if (mouseButton == LEFT)
+    n = n / 2;
 }
 public void sierpinski(int x, int y, int len) 
 {
-  if (len <= 70)
+  if (len <= n)
   {
     triangle(x, y, x+len, y, x+len/2, y-len);
   }
   else 
   {
-    fill(0, 200, 255, 3);
+    fill(110, 250, 255); //blue
     sierpinski(x, y, len/2);
-    fill(0, 255, 200, 3);
+    fill(130, 250, 200); //green
     sierpinski(x+len/2, y, len/2);
-    fill(100, 200, 255, 3);
+    fill(200, 200, 255); //purple
     sierpinski(x+len/4, y-len/2, len/2);
   }
 }
