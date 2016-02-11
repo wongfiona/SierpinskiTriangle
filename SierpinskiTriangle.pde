@@ -13,9 +13,9 @@ public void mousePressed()//optional
 {
   	background(200);
   	if (mouseButton == LEFT && n >= 20) //can click 5x
-    	n = n / 2;
+    	    n = n / 2;
 	else if (mouseButton == RIGHT) //can click 6x
-		n = n * 2;
+	    n = n * 2;
     //if (n == 15) //repeatable - can click 4x
     //  n = 500;
 }
